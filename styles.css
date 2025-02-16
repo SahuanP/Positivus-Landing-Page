@@ -13,6 +13,7 @@
 
 body {
   margin: 2rem 100px 0;
+  background-color: white;
 }
 
 body header {
@@ -128,17 +129,19 @@ body .services {
   & .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
     width: 100%;
     & .card {
       height: 310px;
-      width: 45%;
+      width: 49%;
       border-radius: 45px;
       box-shadow: var(--dark) 0px 5px;
       border: solid 1px var(--dark);
-      margin: 0 40px 40px 0;
       padding: 50px;
       display: flex;
       justify-content: space-between;
+      margin-bottom: 40px;
 
       & .about-card {
         display: flex;
@@ -165,6 +168,47 @@ body .services {
           width: 90%;
         }
       }
+    }
+
+    & .card:hover {
+      transition: 0.2s ease-in-out;
+      scale: 102%;
+    }
+  }
+
+  & #proposal-card {
+    display: flex;
+    width: 100%;
+    background-color: var(--gray);
+    border-radius: 45px;
+    align-items: center;
+    margin-top: 100px;
+
+    & #proposal-left {
+      padding: 60px;
+      & h3 {
+        font-size: 2rem;
+        margin-bottom: 1.8rem;
+      }
+
+      & p {
+        max-width: 60%;
+        font-size: 1.2rem;
+        margin-bottom: 1.8rem;
+      }
+
+      & button {
+        color: var(--gray);
+        background-color: var(--dark);
+        padding: 20px 35px;
+        font-size: 1.1rem;
+        border-radius: 14px;
+      }
+    }
+
+    & #proposal-img {
+      position: absolute;
+      right: 15%;
     }
   }
 }
