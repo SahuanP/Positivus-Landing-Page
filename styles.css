@@ -295,5 +295,58 @@ body #case-studies #irl-examples {
         margin-right: 15px;
       }
     }
+    & .ex-learn-more:hover {
+      & img {
+        transform: rotate(30deg);
+        transition: 0.1s ease-in-out;
+      }
+    }
+  }
+}
+
+body #work-process {
+  & .wp-faq-box {
+    background-color: var(--gray);
+    border-radius: 45px;
+    padding: 40px 60px;
+    box-shadow: var(--dark) 0px 5px;
+    border: solid 1px var(--dark);
+    margin-bottom: 30px;
+
+    & .faq-box-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & .faq-box-title {
+        display: flex;
+        align-items: center;
+      }
+
+      & span {
+        font-size: 3.8rem;
+        font-weight: bold;
+        margin-right: 25px;
+      }
+
+      & p {
+        font-size: 2rem;
+      }
+
+      & .faq-icon {
+        cursor: pointer;
+      }
+    }
+
+    & .faq-content {
+      margin-top: 30px;
+      border-top: 1px solid var(--dark);
+      display: none;
+      transition: 0.2 ease-in-out;
+      & p {
+        font-size: 1.1rem;
+        margin-top: 30px;
+      }
+    }
   }
 }
