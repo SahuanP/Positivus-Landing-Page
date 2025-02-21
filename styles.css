@@ -2,6 +2,7 @@
   --green: #b9ff66;
   --gray: #f3f3f3;
   --dark: #191a23;
+  --white: #fff;
 }
 
 * {
@@ -100,7 +101,6 @@ body .brands {
   display: flex;
   justify-content: space-around;
   margin-top: 70px;
-  margin-bottom: 120px;
 
   & .brand {
     & img {
@@ -109,10 +109,11 @@ body .brands {
   }
 }
 
-body .services {
-  & .services-head {
+body section {
+  & .section-head {
     display: flex;
     margin-bottom: 60px;
+    margin-top: 120px;
     & h2 {
       background-color: var(--green);
       border-radius: 5px;
@@ -125,7 +126,9 @@ body .services {
       max-width: 580px;
     }
   }
+}
 
+body .services {
   & .cards {
     display: flex;
     flex-wrap: wrap;
@@ -156,6 +159,7 @@ body .services {
           width: 100%;
           display: flex;
           align-items: center;
+          cursor: pointer;
           & img {
             max-width: 80%;
             margin-right: 15px;
@@ -203,6 +207,13 @@ body .services {
         padding: 20px 35px;
         font-size: 1.1rem;
         border-radius: 14px;
+        cursor: pointer;
+        transition: 0.15s ease-in;
+      }
+
+      & button:hover {
+        background-color: var(--gray);
+        color: var(--dark);
       }
     }
 
@@ -250,6 +261,38 @@ body .services .cards {
 
       & span {
         color: var(--gray);
+      }
+    }
+  }
+}
+
+body #case-studies #irl-examples {
+  background-color: var(--dark);
+  color: var(--white);
+  border-radius: 45px;
+  padding: 70px 60px;
+  display: flex;
+
+  & .line {
+    margin: 0 64px;
+    border-right: 1px var(--white) solid;
+  }
+
+  & .single-example {
+    & p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    & .ex-learn-more {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      & span {
+        color: var(--green);
+        font-size: 1.25rem;
+        margin-right: 15px;
       }
     }
   }
