@@ -112,6 +112,7 @@ body .brands {
 body section {
   & .section-head {
     display: flex;
+    align-items: center;
     margin-bottom: 60px;
     margin-top: 120px;
     & h2 {
@@ -294,11 +295,11 @@ body #case-studies #irl-examples {
         font-size: 1.25rem;
         margin-right: 15px;
       }
-    }
-    & .ex-learn-more:hover {
-      & img {
-        transform: rotate(30deg);
-        transition: 0.1s ease-in-out;
+      &:hover {
+        & img {
+          transform: rotate(30deg);
+          transition: 0.1s ease-in-out;
+        }
       }
     }
   }
@@ -347,6 +348,70 @@ body #work-process {
         font-size: 1.1rem;
         margin-top: 30px;
       }
+    }
+  }
+}
+
+body #team {
+  & .team-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  & .team-mate {
+    padding: 40px 35px;
+    background-color: var(--white);
+    border-radius: 45px;
+    box-shadow: var(--dark) 0px 5px;
+    border: solid 1px var(--dark);
+    max-width: 387px;
+    margin-bottom: 40px;
+    & .linkedin-icon {
+      position: relative;
+      & img {
+        position: absolute;
+        right: 0.5rem;
+      }
+    }
+
+    & .tm-top {
+      display: flex;
+      align-items: end;
+      margin-bottom: 28px;
+      & .tm-pic {
+        margin-right: 1rem;
+        & img {
+          mask-image: url(./assets/team/Rounded\ star\ vector.svg);
+          mask-repeat: no-repeat;
+        }
+      }
+
+      & .tm-name-pos {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  & .tm-bottom {
+    border-top: 2px solid var(--dark);
+    & p {
+      font-size: 1.1rem;
+      margin-top: 28px;
+    }
+  }
+
+  & button {
+    padding: 20px 76px;
+    border-radius: 14px;
+    background-color: var(--dark);
+    color: var(--white);
+    position: absolute;
+    right: 100px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--dark);
+      transition: 0.2s ease-in-out;
     }
   }
 }
